@@ -1,7 +1,6 @@
 '''
-Hangman game with one or two players.
+Hangman game with one or two players for the console.
 Author: Matthias Sieber <empower@manonthemat.com>
-Date: 2013/06/26
 '''
 
 import os # for clear/cls function to clear the screen
@@ -155,7 +154,6 @@ def checkLetterInWord(letter):
     if (letter in theWord) == False:
         fails += 1
     else:
-#        print(letter,"is in the word! :)")
         i = 0
         while i < len(theWord):
             x = theWord.find(letter, i) # find the position of the letter in theWord
@@ -183,4 +181,5 @@ def main():
     print ("\aYou lose - You hang!") # since you didn't win, you lose and hang!
     print ("The word was",theWord)
 
-main()
+if __name__ == "__main__":
+    main()
